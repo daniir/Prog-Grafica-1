@@ -8,6 +8,18 @@
 <body>
   <div id="app">
     <h1>Formulario de Datos</h1>
+    <span>Nombre</span>
+    <el-input placeholder="Digite su nombre" v-model="input"></el-input>
+    <br>
+    <span>Sexo</S></span>
+    <br>
+    <el-radio v-model="radio" label="1">M</el-radio>
+    <el-radio v-model="radio" label="2">F</el-radio>
+    <br>
+    <span>Edad</span>
+    <br>
+    <el-input-number v-model="num8" controls-position="right" @change="handleChange" :min="1" :max="10"></el-input-number>
+    <br>
     <el-button @click="visible = true">subir</el-button>
     <el-dialog :visible.sync="visible" title="Hola">
       <p>Prueba</p>
