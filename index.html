@@ -24,6 +24,49 @@
     <br>
     <el-input placeholder="Agregar Telefono" v-model="input"></el-input>
     <br>
+    <span>Carreras</span>
+    <br>
+    <template>
+      <el-select v-model="value" placeholder="Selecionar">
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value">
+        </el-option>
+      </el-select>
+    </template>
+    
+    <script>
+      export default {
+        data() {
+          return {
+            options: [{
+              value: 'Ingenieria',
+              label: 'Ingenieria'
+            }, {
+              value: 'Licenciatura',
+              label: 'Licenciatura'
+            }, {
+              value: 'Salud',
+              label: 'Salud'
+            }, {
+              value: 'Diseño',
+              label: 'Diseño'
+            }, {
+              value: 'Arte',
+              label: 'Arte'
+            }],
+            value: ''
+          }
+        }
+      }
+    </script>
+    <br>
+
+
+
+
     <el-button @click="visible = true">subir</el-button>
     <el-dialog :visible.sync="visible" title="Hola">
       <p>Prueba</p>
