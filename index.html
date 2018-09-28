@@ -63,10 +63,10 @@
       }
     </script>
     <br>
-
-
-
-
+    <span>Termino de condiciones</span>
+    <el-checkbox v-model="checked1" disabled>Aceptar</el-checkbox>
+    <el-checkbox v-model="checked2" disabled>Rechazar</el-checkbox>
+    <br>
     <el-button @click="visible = true">subir</el-button>
     <el-dialog :visible.sync="visible" title="Hola">
       <p>Prueba</p>
